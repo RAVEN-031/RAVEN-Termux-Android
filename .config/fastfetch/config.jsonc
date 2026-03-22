@@ -10,7 +10,7 @@
     },
     "padding": {"top": 1}
   },
-  "display": {"separator": " "},
+  "display": {"separator": " ", "size": {"binaryPrefix": "jedec"}},
   "modules": 
   [
     {
@@ -23,12 +23,14 @@
     {
       "type": "os",
       "key": "╭ ",
-      "keyColor": "#FF0909"
+      "keyColor": "#FF0909",
+      "format": "{name}"
     },
     {
-      "type": "kernel",
+      "type": "command",
       "key": "├ ",
-      "keyColor": "#FF0909"
+      "keyColor": "#FF0909",
+      "text": "uname -sr | cut -d- -f1"
     },
     {
       "type": "packages",
@@ -66,7 +68,8 @@
     {
       "type": "terminal",
       "key": "╭ ",
-      "keyColor": "#DC5F00"
+      "keyColor": "#DC5F00",
+      "format": "{pretty-name}"
     },
     {
       "type": "shell",
@@ -83,7 +86,8 @@
     {
       "type": "host",
       "key": "╭ ",
-      "keyColor": "#007DDC"
+      "keyColor": "#007DDC",
+      "format": "{2} {3} {4}"
     },
     {
       "type": "cpu",
@@ -106,19 +110,13 @@
       "type": "memory",
       "key": "├ ",
       "keyColor": "#007DDC",
-      "percent": 
-        {
-          "type": 3
-        }
+      "format": "{used} / {total} {percentage}"
     },
     {
       "type": "disk",
       "key": "├ ",
       "keyColor": "#007DDC",
-      "percent": 
-        {
-          "type": 3
-        }
+      "format": "{size-used} / {size-total} {size-percentage}"
     },
     {
       "type": "uptime",
