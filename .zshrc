@@ -243,7 +243,7 @@ fi
 # Aliases
 alias ll='lsd -l'
 alias la='lsd -A'
-alias l='lsd -F'
+alias l='lsd'
 
 alias ff='fastfetch'
 alias c='clear'
